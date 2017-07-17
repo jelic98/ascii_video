@@ -1,30 +1,27 @@
 #include <stdio.h>
-#include <string.h>
 #include <stdlib.h>
 #include <unistd.h>
 
 int main() {
-	for(int i = 0; i < 15; i++) {
-	    system("clear");
+	while(1 == 1) {
+		for(int i = 1; i <= 20; i++) {
+			char name[255];
 
-		char name[99];
+			sprintf(name, "anim/%d.txt", i);
 
-		sprintf(name, "anim/%d.txt", i + 1);
-
-		FILE *fp = fopen(name, "r");	
+			FILE *fp = fopen(name, "r");	
 		
-		printf("\r");
+			printf("\r");
 
-		while(!feof(fp)) {
-	 	 	putchar(fgetc(fp));
-		}
+			while(!feof(fp)) {
+	 	 		putchar(fgetc(fp));
+			}
 
-		sleep(1);
-	};
+			usleep(100000);
 
-	system("clear");
+			system("clear");
+		};
+	}
 
-	printf("THE END\n");
-	
 	return 0;
 }
