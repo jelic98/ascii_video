@@ -35,7 +35,7 @@ $processor = new Processor($file);
 $processor
     ->asciify(5)                    
 	->asciifyToWidth(100) 
-	->result('#@WMXBRwmxbq+:-.')
+	->result('#@WMNXBRD8OZ$7I?wmxbq+=~:,.')
 	->writeFile('anim/' . ++$i . '.txt');
 }
 ?>
